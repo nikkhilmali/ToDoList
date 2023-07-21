@@ -23,8 +23,8 @@ const Connection = ()=>{
         console.log('Database Disconnected');
     });
 
-    mongoose.connection.on('error',()=>{
-        console.log('Error while connecting the Database',error.message);
+    mongoose.connection.on('error',(err)=>{
+        console.log('Error while connecting the Database',err.message);
     });
 }
 
